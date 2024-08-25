@@ -1,0 +1,244 @@
+*{
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+    font-family: "Matemasie", sans-serif;
+}
+
+body{
+    height: 100vh;
+    background-image: url(https://images.pexels.com/photos/268533/pexels-photo-268533.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2);
+    background-size: cover;
+    background-position: center;
+}
+
+li{
+    list-style: none;
+}
+
+a{
+    text-decoration: none;
+    color: #fff;
+    font-size: 1rem;
+}
+
+a:hover{
+    color: #63c782;
+}
+
+header{
+    position: relative;
+    padding: 0 2rem;
+    background-color: rgba(0, 0, 0, 0.238);
+}
+
+.navbar{
+    width: 100%;
+    max-width: 1200px;
+    height: 60px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.navbar .logo a{
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.navbar .links{
+    display: flex;
+    gap: 2rem;
+}
+
+.navbar .Burger_Menu_Button{
+    color: #fff;
+    font-size: 1.5rem;
+    cursor: pointer;
+    display: none;
+}
+
+.navbar .Profile{
+    color: rgb(241, 242, 241);
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+.Action_Button{
+    background-color: #63c782;
+    color: #120d31;
+    border: 1px solid #63c782;
+    padding: 0.5rem 1.2rem;
+    border-radius: 5px;
+    outline: none;
+    font-size: 0.9rem;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.Action_Button:hover{
+    color: #fff;
+    border: 1px solid #fff ;
+}
+
+/* ------ Burger Menu ------ */
+.Burger_Menu{
+    display: none;
+    height: 0;
+    position: absolute;
+    right: 2rem;
+    top: 60px;
+    width: 200px;
+    background: rgba(0, 0, 0, 0.2);
+    backdrop-filter: blur(15px);
+    border-radius: 10px;
+    overflow: hidden;
+    transition: height 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.Burger_Menu.open{
+height: 310px;
+}
+
+.Burger_Menu li{
+    padding: 0.7rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.Divider{
+    height: 1px;
+    background-color: #fff;
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 1rem;
+}
+
+.Burger_Menu .Action_Button{
+    width: 80%;
+    display: flex;
+    justify-content: center;
+    align-self: center;
+}
+
+.Button_Burger_Menu{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+/* ------ RESPONSIVE ------ */
+
+@media (max-width: 990px){
+    header{
+        background: none;
+    }
+
+    .navbar .links,
+    .navbar .Action_Button{
+        display: none;
+    }
+
+    .navbar .Burger_Menu_Button{
+        display: block;
+    }
+
+    .Burger_Menu{
+        display: block;
+    }
+}
+
+/*-- A PROPOS --*/
+section#Informations{
+   padding: 100px 0;
+}
+
+section#Informations .Container{
+    max-width: 900px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    background-color: white;
+    padding: 20px 10px;
+    border-radius: 15px;
+    box-sizing: border-box;
+    box-shadow: 0px 10px 50px -10px #d6d6d6;   
+    height: 500px;
+}
+
+section#Informations .Container .title{
+    text-align: center;
+    color: #2a2a2a;
+    margin-bottom: 0px;
+}
+
+section#Informations .Container .title h3{
+    font-size: 2.5em;
+}
+
+section#Informations .Container form{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between 10px;
+    max-width: 550px;
+}
+
+section#Informations .Container form input{
+   width: 1000%; 
+   align-items: first baseline;
+}
+
+section#Informations .Container form input:hover,
+section#Informations .Container form textarea:hover{
+    border-bottom: 2px solid #1fb3bf;
+ }
+
+ section#Informations .Container form textarea{
+    width: 100%;
+    resize: none;
+    height: 100px;
+    margin-bottom: 800px;
+ }
+
+ section#Informations .Container form input,
+ section#Informations .Container form textarea{
+ margin: 15px 0;
+ padding: 0px;
+ box-sizing: border-box;
+ border: none;
+ outline: none;
+ border-bottom: 2px solid #e4e4ec;
+ transition: 0.2s;
+ }
+
+
+ section#Informations .Container form button{
+width: 250px;
+height: 50px;
+border-radius: 8px;
+border: none;
+background-color: #1fb3bf;
+color: white;
+font-weight: bold;
+font-size: 1.2em;
+cursor: pointer;
+outline: none;
+margin: 0 auto;
+ }
+
+ section#Informations .Container form button:hover{
+    transform: translateY(-5px);
+    box-shadow: rgb(214 214 214) 0px 10px 40px 0px;
+ }
+
+/*-- Footer --*/
+.main_footer{
+    background-color: #242424;
+    color: #fff;
+    align-items: center;
+}
